@@ -1,5 +1,5 @@
 import React from 'react';
-import UpperNavbar from '../../components/UpperNavbar';
+import UpperNavbar from '../../components/Navbar/UpperNavbar';
 import ButtonBig from '../../components/Button/ButtonBig';
 import { Link } from 'react-router-dom';
 // import '../../index.css';
@@ -15,12 +15,12 @@ const LocalLoginPage: React.FC = () => {
         <div className="flex w-full h-[70px] bg-white">
           <label
             htmlFor="email"
-            className="block ml-6 mt-7 mb-7 text-2xl font-bold text-gray-900 dark:text-white"
+            className="block ml-6 text-2xl font-bold text-gray-900 mt-7 mb-7 dark:text-white"
           >
             이메일로 로그인
           </label>
         </div>
-        <div className="max-w-md w-full">
+        <div className="w-full max-w-md">
           <form className="flex flex-col items-center">
             <div className="relative z-0 w-10/12 max-w-xs mt-5 mb-7 group">
               <input
@@ -55,13 +55,13 @@ const LocalLoginPage: React.FC = () => {
               </label>
             </div>
           </form>
-          <div className="w-full flex justify-center mt-3">
-            <div className="w-10/12 max-w-xs flex justify-center">
+          <div className="flex justify-center w-full mt-3">
+            <div className="flex justify-center w-10/12 max-w-xs">
               <ButtonBig text={'로그인'} bgColor={'#BFE647'} />
             </div>
           </div>
-          <div className="w-full flex justify-center">
-            <Link to="/local/FindId" className="text-slate-300 text-sm">
+          <div className="flex justify-center w-full">
+            <Link to="/local/FindId" className="text-sm text-slate-300">
               비밀번호를 잊으셨나요?
             </Link>
           </div>

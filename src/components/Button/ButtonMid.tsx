@@ -3,6 +3,7 @@ import React from 'react';
 interface ButtonProps {
   text: string;
   bgColor: string;
+  onClick?: () => void;
 }
 
 const ButtonMid: React.FC<ButtonProps> = ({ text, bgColor }) => {
@@ -10,9 +11,9 @@ const ButtonMid: React.FC<ButtonProps> = ({ text, bgColor }) => {
     <button
       type="button"
       className={`
-        w-[160px] h-[45px] text-midBtn
-        text-center rounded-[7.5px] px-5 py-2.5 me-2 mb-2
-        focus:outline-none text-black bg-${bgColor}
+        w-[115px] h-[32px] rounded-[7.5px] px-5 py-1
+        text-midBtn text-center font-[Nexon-Medium]
+        text-black bg-${bgColor} border-solid border-main-color box-border
         hover:bg-hover-color`}
     >
       {text}

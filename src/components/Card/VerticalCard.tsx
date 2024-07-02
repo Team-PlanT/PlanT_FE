@@ -1,6 +1,5 @@
 import React from 'react';
 
-import eximgV from '../assets/images/eximgV.png';
 import { useNavigate } from 'react-router-dom';
 
 const VerticalCard: React.FC = () => {
@@ -18,7 +17,11 @@ const VerticalCard: React.FC = () => {
       >
         {/* card img */}
         <a href="#">
-          <img className="h-[150px] rounded-t-lg" src={eximgV} alt="" />
+          <img
+            className="h-[150px] rounded-t-lg"
+            src="/img/eximgV.png"
+            alt=""
+          />
         </a>
 
         <div className="p-5">

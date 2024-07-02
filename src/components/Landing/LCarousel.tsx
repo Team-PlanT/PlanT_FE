@@ -7,10 +7,6 @@ import type {
 } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
 
-import carousel1 from '../assets/carousel/carousel01.jpg';
-import carousel2 from '../assets/carousel/carousel02.jpg';
-import carousel3 from '../assets/carousel/carousel03.jpeg';
-
 const LCarousel: React.FC<{
   onCarouselInstance: (instance: CarouselInterface | null) => void;
 }> = ({ onCarouselInstance }) => {
@@ -116,7 +112,7 @@ const LCarousel: React.FC<{
           data-carousel-item
         >
           <img
-            src={carousel1}
+            src="/img/carousel01.jpg"
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="carousel 1"
           />
@@ -127,7 +123,7 @@ const LCarousel: React.FC<{
           data-carousel-item
         >
           <img
-            src={carousel2}
+            src="/img/carousel02.jpg"
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="carousel 2"
           />
@@ -138,13 +134,13 @@ const LCarousel: React.FC<{
           data-carousel-item
         >
           <img
-            src={carousel3}
+            src="/img/carousel03.jpeg"
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="carousel 3"
           />
         </div>
       </div>
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-0 left-1/2 space-x-3 rtl:space-x-reverse">
+      <div className="absolute bottom-0 z-30 flex space-x-3 -translate-x-1/2 left-1/2 rtl:space-x-reverse">
         <button
           id="carousel-indicator-1"
           type="button"
