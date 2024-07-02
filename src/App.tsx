@@ -1,10 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import UpperNavbar from './components/UpperNavbar';
+
+import UpperNavbar from './components/Navbar/UpperNavbar';
+import BottomNavbar from './components/Navbar/BottomNavbar';
+
 import DetailPage from './pages/DetailPage';
 import MainPage from './pages/MainPage';
-import Alert from "./components/Alert/Alert";
-import ModalRequest from "./components/ModalRequest/ModalRequest";
+import LoginPage from './pages/Login/LoginPage';
 
 const App: React.FC = () => {
   return (
@@ -13,12 +15,9 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/main" element={<MainPage />} />
         <Route path="/detail" element={<DetailPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
-      <Alert text="ID와 일치하지 않습니다." />
-      <ModalRequest
-        isOpen={true}
-        text={"사용자 정보 활용에 동의하십니까?"}
-      ></ModalRequest>
+      <BottomNavbar />
     </div>
   );
 };
