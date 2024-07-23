@@ -69,12 +69,6 @@ const VerticalCard: React.FC<VerticalCardProps> = ({
         <p className="text-[6px] font-['Nexon-Bold'] text-gray-dark dark:text-gray-400 whitespace-pre-line">
           {content}
         </p>
-        <p className="text-[6px] font-['Nexon-Bold'] text-gray-dark dark:text-gray-400 whitespace-pre-line">
-          장평은 4로 조절하며 자간은 따로 없습니다.
-        </p>
-        <p className="text-[6px] font-['Nexon-Bold'] text-gray-dark dark:text-gray-400 whitespace-pre-line">
-          웬만하면 회색조의 글로 쓸 수 있게 만들어 줍시다.
-        </p>
       </div>
     </div>
   );
