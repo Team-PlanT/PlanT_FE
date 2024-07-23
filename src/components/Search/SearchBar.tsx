@@ -116,7 +116,7 @@ const SearchBar: React.FC = () => {
 
   return (
     <div>
-      <form className="w-11/12 mt-16 mx-auto" onSubmit={handleSearch}>
+      <form className="w-11/12 mt-5 mx-auto" onSubmit={handleSearch}>
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
