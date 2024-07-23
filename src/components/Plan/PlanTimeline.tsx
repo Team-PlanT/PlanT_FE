@@ -7,7 +7,7 @@ interface PlanTimelineProps {
 
 const PlanTimeline: React.FC<PlanTimelineProps> = ({ plans }) => {
   return (
-    <div className="px-2" style={{ maxWidth: '320px', margin: '0 auto' }}>
+    <div className="px-4" style={{ maxWidth: '320px', margin: '0 auto' }}>
       <ol className="relative border-l border-gray-200 dark:border-gray-700">
         {plans.map((plan, index) => (
           <li className="mb-10 ml-4" key={index}>
@@ -18,8 +18,10 @@ const PlanTimeline: React.FC<PlanTimelineProps> = ({ plans }) => {
               {plan.pl_schedule}
             </h3>
             <p className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 font-nexonMedium">
-              {new Date(plan.pl_date).toLocaleDateString()} {plan.pl_startTime}{' '}
-              - {plan.pl_endTime}
+              {new Date(plan.pl_date).toLocaleDateString()}
+              <br />
+              <br />
+              {plan.pl_startTime} ~ {plan.pl_endTime}
             </p>
             <p className="mb-1 text-base font-normal text-gray-500 dark:text-gray-400 font-nexonMedium">
               {plan.pl_content}
