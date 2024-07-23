@@ -34,24 +34,24 @@ const DetailPage: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col items-center min-h-screen font-[Nexon]">
-      <div className="flex w-full h-[70px] bg-white">
+    <div className="flex flex-col items-center justify-center min-h-screen font-[Nexon]">
+      <div className="flex w-full bg-white">
         <label
           htmlFor="email"
-          className="block ml-5 text-2xl font-bold text-gray-900 mt-7 mb-7 dark:text-white"
+          className="block ml-10 text-2xl font-bold text-gray-900 mt-5 mb-3 dark:text-white"
         >
           일정 테이블
         </label>
       </div>
-      <div className="flex flex-col items-center justify-center mt-16 mb-16">
+      <div className="flex flex-col items-center justify-center mt-2 mb-2">
         <div className="w-full max-w-4xl p-4">
-          <div className="flex flex-col items-start space-y-8">
+          <div className="flex flex-col items-start space-y-7">
             <PlanTable plans={plans || []} />
             <div className="w-full">
-              <div className="flex w-full h-[70px] bg-white">
+              <div className="flex w-full h-[70px] bg-white mb-6">
                 <label
                   htmlFor="email"
-                  className="block ml-5 text-2xl font-bold text-gray-900 mt-7 mb-7 dark:text-white"
+                  className="block ml-7 text-2xl font-bold text-gray-900 mt-4 mb-3 dark:text-white"
                 >
                   타임라인
                 </label>

@@ -13,6 +13,16 @@ const PlanTable: React.FC<PlanTableProps> = ({ plans }) => {
     return dateA.getTime() - dateB.getTime();
   });
 
+  // 날짜 포맷팅 함수
+  const formatDate = (dateString: string) => {
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
   return (
     <div
       className="relative overflow-x-auto px-2"
@@ -22,7 +32,7 @@ const PlanTable: React.FC<PlanTableProps> = ({ plans }) => {
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
             <th scope="col" className="w-1/3 px-6 py-3">
-              일정 (시간)
+              일정 (날짜 및 시간)
             </th>
             <th scope="col" className="w-2/3 px-6 py-3">
               장소
@@ -39,7 +49,9 @@ const PlanTable: React.FC<PlanTableProps> = ({ plans }) => {
                 scope="row"
                 className="w-1/3 px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                {plan.pl_startTime} - {plan.pl_endTime}
+                {formatDate(plan.pl_date)}
+                <br />
+                {plan.pl_startTime} ~ {plan.pl_endTime}
               </th>
               <td className="w-2/3 px-6 py-4">{plan.pl_place}</td>
             </tr>
