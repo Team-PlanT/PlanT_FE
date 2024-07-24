@@ -23,6 +23,12 @@ const PlanTable: React.FC<PlanTableProps> = ({ plans }) => {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
+  // 시간 포맷팅 함수 (초 제외)
+  const formatTime = (timeString: string) => {
+    const [hours, minutes] = timeString.split(':');
+    return `${hours}:${minutes}`;
+  };
+
   return (
     <div
       className="relative overflow-x-auto px-2"
@@ -51,7 +57,7 @@ const PlanTable: React.FC<PlanTableProps> = ({ plans }) => {
               >
                 {formatDate(plan.pl_date)}
                 <br />
-                {plan.pl_startTime} ~ {plan.pl_endTime}
+                {formatTime(plan.pl_startTime)} ~ {formatTime(plan.pl_endTime)}
               </th>
               <td className="w-2/3 px-6 py-4">{plan.pl_place}</td>
             </tr>
